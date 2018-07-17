@@ -1,0 +1,26 @@
+{
+  "name": "html-wiztivi",
+  "version": "1.0.0",
+  "description": "projet réalisé dans le cadre de la formation WIZTIVI ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1", 
+    "serve": "stencil-dev-server --root src --httpPort 8000"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/marlenetienne/test.git"
+  },
+  "keywords": [
+    "wiztivi"
+  ],
+  "author": "Marlène Etienne",
+  "license": "ISC",
+  "devDependencies": {
+    "@stencil/dev-server": "0.018"
+  },
+  "bugs": {
+    "url": "https://github.com/marlenetienne/test/issues"
+  },
+  "homepage": "https://github.com/marlenetienne/test#readme"
+}
