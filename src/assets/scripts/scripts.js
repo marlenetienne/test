@@ -1,4 +1,4 @@
-// var => scope global 
+// var => scope de fonction 
 // var => peut être redéfinie
 
 // let => variable est scopée 
@@ -8,8 +8,6 @@
 // const => variable immutable 
 
 // tableau de films 
-
-
 
 // une fois la page chargée, on exécute le script 
 
@@ -45,23 +43,25 @@ document.addEventListener("DOMContentLoaded", function(event) {
     // })
     // .catch(console.error)
 
+    // faire de l'asynchrone avec une syntaxe synchrone avec les mot-clés async et await : il faut qu'une fonction soit considérée comme asynchrone pour que le await fonctionne
+    // 
+
     // async function
     async function fetchAsync () {
-      // attend la réponse du fetch  
+      try {
+      // est stocké seulement quand la réponse du fetch est arrivée au client  
       let response = await fetch('/data/movies.json');
-      // est exécuté seulement quand la promesse est résolu 
+      // est stocké seulement quand la promesse est résolue 
       let data = await response.json();
-      return data;
+      data.forEach((element) => {
+        createArticle(element);
+      })
+      } catch(error) {
+        console.error(error)
+      }
     }
 
     fetchAsync()
-      .then(data => {
-        // console.log(data);
-        data.forEach((element) => {
-          createArticle(element);
-      })
-    })
-    .catch(console.error)
 
 
        function createArticle(el) {
