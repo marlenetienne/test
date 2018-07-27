@@ -62,8 +62,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
     }
 
     fetchAsync()
-
-
        function createArticle(el) {
           const article = document.createElement('article');
            section.appendChild(article);

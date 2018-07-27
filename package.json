@@ -4,8 +4,10 @@
   "description": "projet réalisé dans le cadre de la formation WIZTIVI ",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1", 
-    "serve": "stencil-dev-server --root src --httpPort 8000"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "serve": "stencil-dev-server --root src --httpPort 8000",
+    "build": "grunt",
+    "start": "serve dist"
   },
   "repository": {
     "type": "git",
@@ -17,10 +19,23 @@
   "author": "Marlène Etienne",
   "license": "ISC",
   "devDependencies": {
-    "@stencil/dev-server": "0.018"
+    "@stencil/dev-server": "0.018",
+    "grunt": "^1.0.3",
+    "grunt-concat-css": "^0.3.2",
+    "grunt-contrib-clean": "^1.1.0",
+    "grunt-contrib-copy": "^1.0.0",
+    "grunt-contrib-cssmin": "^2.2.1",
+    "grunt-contrib-htmlmin": "^2.4.0",
+    "grunt-contrib-uglify-es": "^3.3.0",
+    "grunt-dom-munger2": "^4.0.1",
+    "grunt-json-minification": "^0.2.1",
+    "grunt-minjson": "^0.4.0"
   },
   "bugs": {
     "url": "https://github.com/marlenetienne/test/issues"
   },
-  "homepage": "https://github.com/marlenetienne/test#readme"
+  "homepage": "https://github.com/marlenetienne/test#readme",
+  "dependencies": {
+    "serve": "^9.4.0"
+  }
 }
